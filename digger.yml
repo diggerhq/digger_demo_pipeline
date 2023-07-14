@@ -1,0 +1,19 @@
+projects:
+- name: app_a_dev
+  dir: app_a
+  workflow: my_custom_workflow
+- name: app_a_prod
+  dir: app_a
+  workflow: my_custom_workflow
+- name: app_b_dev
+  dir: app_b
+  workflow: my_custom_workflow
+- name: app_b_prod
+  dir: app_a
+  workflow: my_custom_workflow
+workflows:
+  my_custom_workflow:
+    workflow_configuration:
+      on_pull_request_pushed: [digger plan]
+      on_pull_request_closed: [digger unlock]
+      on_commit_to_default: [digger apply]
