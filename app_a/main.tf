@@ -6,7 +6,7 @@ resource "null_resource" "test_2" {
 
 }
 
-resource "null_resource" "test_5" {
+resource "null_resource" "test_6" {
 
 }
 
