@@ -11,3 +11,10 @@ resource "null_resource" "test_8" {
 }
 
 
+
+resource "null_resource" "test_9" {
+
+}
+
+
+
